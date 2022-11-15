@@ -51,3 +51,5 @@ prom
 
 // async await
 // https://dev.to/jerrycode06/callback-hell-and-how-to-rescue-it-ggj
+
+console.log("test");
