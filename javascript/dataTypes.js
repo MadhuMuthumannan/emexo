@@ -32,4 +32,4 @@ function printMaritalStatus(user) {
 printMaritalStatus(parvathy);
 
 printMaritalStatus(suji);
-console.log("suji")
+console.log('suji');
