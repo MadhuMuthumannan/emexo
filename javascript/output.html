@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <head>
     <script type="text/JavaScript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
-    <script src="lodashMethods.js"></script>
+    <script src="jsEvents.js"></script>
 </head>
 <body>
     <div id="firstDiv">
+        Enter your name: <input type="text" id="fname" onblur="onBlur()" onkeypress="onKeyPress()">
+
+        
+    <select id="mySelect" onchange="onChange()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Volvo">Volvo</option>
+    </select>
     </div>
 </body>
 </html>
