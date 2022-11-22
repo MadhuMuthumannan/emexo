@@ -49,3 +49,5 @@ console.log(numbers);
 // converts to string
 console.log(numbers.toString());
 console.log(typeof numbers.toString());
+
+console.log("Good Afternoon"); // My FIrst Comment
