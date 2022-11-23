@@ -1,10 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import Child from './one/child';
+import Child from './one/Child';
 
 function App() {
-  const numbers = [1, 2, 3, 4];
-  const listItems = numbers.map((num) => <li>The number is {num}</li>);
+  const members = [
+    {
+      name: 'Madhu',
+      age: 28,
+    },
+    {
+      name: 'Kumar',
+      age: 21,
+    },
+    {
+      name: 'Ramesh',
+      age: 12,
+    },
+  ];
+  const listItems = members.map((member) => (
+    <Child name={member.name} age={member.age} />
+  ));
   return <div>{listItems}</div>;
 }
 
