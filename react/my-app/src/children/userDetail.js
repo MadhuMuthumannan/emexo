@@ -1,4 +1,4 @@
-function Child(props) {
+function UserDetail(props) {
   return (
     <div>
       {props.name} is of age {props.age}

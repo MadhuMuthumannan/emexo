@@ -1,8 +1,7 @@
 import React from 'react';
-import FirstDiv from './children/firstDiv';
-import SecondDiv from './children/secondDiv';
-import ThirdDiv from './children/thirdDiv';
-
+import DisplaySum from './children/displaySum';
+import ListNames from './children/listNames';
+import DisplayCount from './children/displayCount';
 function App() {
   const inputNumbers = [1, 2, 3];
   const inputNames = ['Madhu', 'Kumar', 'Karan'];
@@ -19,9 +18,9 @@ function App() {
   };
   return (
     <div>
-      <FirstDiv numbers={inputNumbers} />
-      <SecondDiv names={inputNames} />
-      <ThirdDiv count={count} />
+      <DisplaySum numbers={inputNumbers} />
+      <ListNames names={inputNames} />
+      <DisplayCount count={count} />
       {JSON.stringify(user)}
       Current count is : {count}
       <button onClick={() => setCount(count + 1)}>Increment Counter</button>
