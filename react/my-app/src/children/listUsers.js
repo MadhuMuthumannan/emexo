@@ -4,21 +4,19 @@ export default function ListUsers(props) {
   ));
   console.log(headings);
   const rows = props.users.map((user) => {
-    const styledRow =
-      user.gender === 'Female' ? (
-        <tr key={user.id} style={{ color: 'red' }}>
-          <td>{user.name}</td>
-          <td>{user.age}</td>
-          <td>{user.gender}</td>
-        </tr>
-      ) : (
-        <tr key={user.id}>
-          <td>{user.name}</td>
-          <td>{user.age}</td>
-          <td>{user.gender}</td>
-        </tr>
-      );
-    return styledRow;
+    return user.gender === 'Female' ? (
+      <tr key={user.id} style={{ color: 'red' }}>
+        <td>{user.name}</td>
+        <td>{user.age}</td>
+        <td>{user.gender}</td>
+      </tr>
+    ) : (
+      <tr key={user.id}>
+        <td>{user.name}</td>
+        <td>{user.age}</td>
+        <td>{user.gender}</td>
+      </tr>
+    );
   });
   console.log(rows);
   return (
