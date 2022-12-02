@@ -2,7 +2,6 @@ export default function ListUsers(props) {
   const headings = ['Name', 'Age', 'Gender', 'Rank'].map((heading, index) => (
     <th key={index}>{heading}</th>
   ));
-  console.log(headings);
   const rows = props.users.map((user) => {
     return user.gender === 'Female' ? (
       <tr key={user.id} style={{ color: 'red' }}>
@@ -20,9 +19,13 @@ export default function ListUsers(props) {
       </tr>
     );
   });
-  console.log(rows);
   return (
     <div className="userContainer">
+      Filter text input:
+      <input
+        type="text"
+        onChange={(e) => props.onFilterChange(e.target.value)}
+      ></input>
       <table id="users">
         <tbody>
           <tr>{headings}</tr>

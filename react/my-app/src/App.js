@@ -11,28 +11,28 @@ function App() {
       age: 21,
       gender: 'Male',
       id: 1,
-      rank:120
+      rank: 120,
     },
     {
       name: 'Malathi',
       age: 31,
       gender: 'Female',
       id: 2,
-      rank:87
+      rank: 87,
     },
     {
       name: 'Ramesh',
       age: 51,
       gender: 'Male',
       id: 3,
-      rank:99
+      rank: 99,
     },
     {
       name: 'Suji',
       age: 61,
       gender: 'Female',
       id: 4,
-      rank:50
+      rank: 50,
     },
   ];
   const [count, setCount] = React.useState(0);
@@ -40,16 +40,29 @@ function App() {
     name: 'Rakesh',
     age: 21,
   });
+  const [users, setUsers] = React.useState(inputUsers);
   const updateUser = (prevUser) => {
     setUser({
       ...prevUser,
       age: 23,
     });
   };
+  const onFilterChange = (text) => {
+    let filteredUsers = [];
+    if (text) {
+      filteredUsers = users.filter((user) => {
+        return user.name.includes(text);
+      });
+    } else if (!text) {
+      filteredUsers = inputUsers;
+    }
+
+    setUsers(filteredUsers);
+  };
   return (
     <div className="parentContainer">
       <DisplaySum numbers={inputNumbers} />
-      <ListUsers users={inputUsers} />
+      <ListUsers users={users} onFilterChange={onFilterChange} />
       <div className="counterContainer">
         <DisplayCount count={count} />
         <button onClick={() => setCount(count + 1)}>Increment Counter</button>
