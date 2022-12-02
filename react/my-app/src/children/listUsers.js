@@ -1,5 +1,5 @@
 export default function ListUsers(props) {
-  const headings = ['Name', 'Age', 'Gender'].map((heading, index) => (
+  const headings = ['Name', 'Age', 'Gender', 'Rank'].map((heading, index) => (
     <th key={index}>{heading}</th>
   ));
   console.log(headings);
@@ -9,12 +9,14 @@ export default function ListUsers(props) {
         <td>{user.name}</td>
         <td>{user.age}</td>
         <td>{user.gender}</td>
+        <td>{user.rank}</td>
       </tr>
     ) : (
       <tr key={user.id}>
         <td>{user.name}</td>
         <td>{user.age}</td>
         <td>{user.gender}</td>
+        <td>{user.rank}</td>
       </tr>
     );
   });

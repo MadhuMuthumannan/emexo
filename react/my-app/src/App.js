@@ -11,24 +11,28 @@ function App() {
       age: 21,
       gender: 'Male',
       id: 1,
+      rank:120
     },
     {
       name: 'Malathi',
       age: 31,
       gender: 'Female',
       id: 2,
+      rank:87
     },
     {
       name: 'Ramesh',
       age: 51,
       gender: 'Male',
       id: 3,
+      rank:99
     },
     {
       name: 'Suji',
       age: 61,
       gender: 'Female',
       id: 4,
+      rank:50
     },
   ];
   const [count, setCount] = React.useState(0);
