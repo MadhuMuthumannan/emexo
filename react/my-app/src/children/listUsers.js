@@ -20,7 +20,7 @@ export default function ListUsers(props) {
   });
   console.log(rows);
   return (
-    <div>
+    <div className="userContainer">
       <table id="users">
         <tbody>
           <tr>{headings}</tr>

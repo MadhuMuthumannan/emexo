@@ -13,7 +13,7 @@ code {
 }
 
 .displaySumContainer {
-  border: 1px blue solid;
+  border: 4px blue solid;
   margin: 2px;
   width: 60%;
 }
@@ -49,4 +49,47 @@ code {
   text-align: left;
   background-color: cadetblue;
   color: white;
+}
+
+div.parentContainer {
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+div.userContainer {
+  border: 4px paleturquoise solid;
+  margin: 2px;
+  width: 60%;
+}
+
+div.counterContainer {
+  border: 4px orange solid;
+  margin: 2px;
+  width: 60%;
+}
+
+div.userDetailContainer {
+  border: 4px purple solid;
+  margin: 2px;
+  width: 60%;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 5px;
+  cursor: pointer;
 }

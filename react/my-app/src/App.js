@@ -2,6 +2,7 @@ import React from 'react';
 import DisplaySum from './children/displaySum';
 import ListUsers from './children/listUsers';
 import DisplayCount from './children/displayCount';
+import UserDetail from './children/userDetail';
 function App() {
   const inputNumbers = [1, 2, 3];
   const inputUsers = [
@@ -42,15 +43,16 @@ function App() {
     });
   };
   return (
-    <div>
+    <div className="parentContainer">
       <DisplaySum numbers={inputNumbers} />
       <ListUsers users={inputUsers} />
-      <DisplayCount count={count} />
-      {JSON.stringify(user)}
-      Current count is : {count}
-      <button onClick={() => setCount(count + 1)}>Increment Counter</button>
-      <button onClick={() => setCount(count - 1)}>Decrement Counter</button>
-      <button onClick={() => updateUser(user)}>Update User</button>
+      <div className="counterContainer">
+        <DisplayCount count={count} />
+        <button onClick={() => setCount(count + 1)}>Increment Counter</button>
+        <button onClick={() => setCount(count - 1)}>Decrement Counter</button>
+        <button onClick={() => updateUser(user)}>Update User</button>
+      </div>
+      <UserDetail user={user} />
     </div>
   );
 }
