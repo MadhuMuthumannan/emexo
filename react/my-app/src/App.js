@@ -1,4 +1,5 @@
 import React from 'react';
+import Checkbox from './children/checkBox';
 import DisplaySum from './children/displaySum';
 import ListUsers from './children/listUsers';
 import DisplayCount from './children/displayCount';
@@ -47,7 +48,7 @@ function App() {
       age: 23,
     });
   };
-  const onFilterChange = (text) => {
+  const onFilterTextChange = (text) => {
     let filteredUsers = [];
     if (text) {
       filteredUsers = users.filter((user) => {
@@ -59,16 +60,40 @@ function App() {
 
     setUsers(filteredUsers);
   };
+
+  const filterByAge = (val) => {
+    let filteredUsers = [];
+    if (val) {
+      filteredUsers = users.filter((user) => {
+        return user.age < 30;
+      });
+    } else if (!val) {
+      filteredUsers = inputUsers;
+    }
+
+    setUsers(filteredUsers);
+  };
+
+  const checkboxInputFunction = (val) => {
+    console.log(val);
+  };
+
   return (
     <div className="parentContainer">
       <DisplaySum numbers={inputNumbers} />
-      <ListUsers users={users} onFilterChange={onFilterChange} />
+      <ListUsers
+        users={users}
+        onFilterChange={onFilterTextChange}
+        filterByAge={filterByAge}
+      />
       <div className="counterContainer">
         <DisplayCount count={count} />
         <button onClick={() => setCount(count + 1)}>Increment Counter</button>
         <button onClick={() => setCount(count - 1)}>Decrement Counter</button>
       </div>
       <UserDetail user={user} updateUser={updateUser} />
+
+      <Checkbox label={'SampleLabel'} inputFunc={checkboxInputFunction} />
     </div>
   );
 }

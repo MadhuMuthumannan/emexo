@@ -1,4 +1,4 @@
-export default function ListUsers({ users, onFilterChange }) {
+export default function ListUsers({ users, onFilterChange, filterByAge }) {
   const headings = ['Name', 'Age', 'Gender', 'Rank'].map((heading, index) => (
     <th key={index}>{heading}</th>
   ));
@@ -26,6 +26,11 @@ export default function ListUsers({ users, onFilterChange }) {
         type="text"
         onChange={(e) => onFilterChange(e.target.value)}
       ></input>
+      <input
+        type="checkbox"
+        onChange={(e) => filterByAge(e.target.checked)}
+      ></input>
+      Show users below age 30
       <table id="users">
         <tbody>
           <tr>{headings}</tr>
