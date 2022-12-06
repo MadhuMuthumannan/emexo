@@ -67,9 +67,8 @@ function App() {
         <DisplayCount count={count} />
         <button onClick={() => setCount(count + 1)}>Increment Counter</button>
         <button onClick={() => setCount(count - 1)}>Decrement Counter</button>
-        <button onClick={() => updateUser(user)}>Update User</button>
       </div>
-      <UserDetail user={user} />
+      <UserDetail user={user} updateUser={updateUser} />
     </div>
   );
 }
