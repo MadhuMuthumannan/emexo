@@ -5,6 +5,7 @@ import ListUsers from './children/listUsers';
 import DisplayCount from './children/displayCount';
 import UserDetail from './children/userDetail';
 function App() {
+  let filterText = '';
   const inputNumbers = [1, 2, 3];
   const inputUsers = [
     {
@@ -49,16 +50,18 @@ function App() {
     });
   };
   const onFilterTextChange = (text) => {
-    let filteredUsers = [];
-    if (text) {
-      filteredUsers = users.filter((user) => {
-        return user.name.includes(text);
-      });
-    } else if (!text) {
-      filteredUsers = inputUsers;
-    }
+    filterText = text;
+    console.log(filterText);
+    // let filteredUsers = [];
+    // if (text) {
+    //   filteredUsers = users.filter((user) => {
+    //     return user.name.includes(text);
+    //   });
+    // } else if (!text) {
+    //   filteredUsers = inputUsers;
+    // }
 
-    setUsers(filteredUsers);
+    // setUsers(filteredUsers);
   };
 
   const filterByAge = (val) => {
@@ -78,6 +81,19 @@ function App() {
     console.log(val);
   };
 
+  const onClickFilterButton = () => {
+    let filteredUsers = [];
+    if (filterText) {
+      filteredUsers = users.filter((user) => {
+        return user.name.includes(filterText);
+      });
+    } else if (!filterText) {
+      filteredUsers = inputUsers;
+    }
+
+    setUsers(filteredUsers);
+  };
+
   return (
     <div className="parentContainer">
       <DisplaySum numbers={inputNumbers} />
@@ -85,6 +101,7 @@ function App() {
         users={users}
         onFilterChange={onFilterTextChange}
         filterByAge={filterByAge}
+        onClickFilterButton={onClickFilterButton}
       />
       <div className="counterContainer">
         <DisplayCount count={count} />
