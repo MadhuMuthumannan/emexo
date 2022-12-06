@@ -8,19 +8,20 @@ export default function ListUsers({
     <th key={index}>{heading}</th>
   ));
   const rows = users.map((user) => {
-    return user.gender === 'Female' ? (
-      <tr key={user.id} style={{ color: 'red' }}>
-        <td>{user.name}</td>
-        <td>{user.age}</td>
-        <td>{user.gender}</td>
-        <td>{user.rank}</td>
+    const { id, name, age, gender, rank } = user;
+    return gender === 'Female' ? (
+      <tr key={id} style={{ color: 'red' }}>
+        <td>{name}</td>
+        <td>{age}</td>
+        <td>{gender}</td>
+        <td>{rank}</td>
       </tr>
     ) : (
-      <tr key={user.id}>
-        <td>{user.name}</td>
-        <td>{user.age}</td>
-        <td>{user.gender}</td>
-        <td>{user.rank}</td>
+      <tr key={id}>
+        <td>{name}</td>
+        <td>{age}</td>
+        <td>{gender}</td>
+        <td>{rank}</td>
       </tr>
     );
   });
