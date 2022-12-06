@@ -2,9 +2,20 @@ const user = {
   name: 'Kumar',
   age: 21,
   address: 'Vyshali street',
+  pinCode: 89760,
 };
 
-const { name, age, address } = user;
+const { name, age, address, pinCode } = user;
+
+const props = {
+  users: ['a', 'b', 'c'],
+  onFilterChange: 'someMethod',
+};
+
+// const users = props.users;
+// const onFilterChange = props.onFilterChange;
+
+const { users, onFilterChange } = props;
 
 // const { name: username, age: userage, address: useraddress } = user; // alias
 // const name = user.name;

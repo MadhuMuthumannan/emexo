@@ -1,10 +1,10 @@
-export default function DisplaySum(props) {
+export default function DisplaySum({ numbers }) {
   let sum = 0;
-  props.numbers.forEach((num) => (sum += num));
+  numbers.forEach((num) => (sum += num));
   return (
     <div className="displaySumContainer">
       <p>Display Sum Component</p>
-      <div>Input numbers are "{props.numbers.join(',')}"</div>
+      <div>Input numbers are "{numbers.join(',')}"</div>
       <div>Total is {sum}</div>
     </div>
   );

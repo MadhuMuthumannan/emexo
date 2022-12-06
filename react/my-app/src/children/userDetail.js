@@ -1,9 +1,9 @@
-function UserDetail(props) {
+function UserDetail({ user, updateUser }) {
   return (
     <div className="userDetailContainer">
       <h3>User Detail Component:</h3>
-      {props.user.name} is of age {props.user.age}
-      <button onClick={() => props.updateUser(props.user)}>Update User</button>
+      {user.name} is of age {user.age}
+      <button onClick={() => updateUser(user)}>Update User</button>
     </div>
   );
 }
