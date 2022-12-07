@@ -24,6 +24,7 @@ export default function ListUsers({
           <Rows users={users} />
         </tbody>
       </table>
+      {/* <Table users={users} headings={headings} /> */}
     </div>
   );
 }
