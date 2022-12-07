@@ -1,5 +1,4 @@
 import React from 'react';
-import Checkbox from './children/checkBox';
 import DisplaySum from './children/displaySum';
 import ListUsers from './children/listUsers';
 import DisplayCount from './children/displayCount';
@@ -49,19 +48,9 @@ function App() {
       age: 23,
     });
   };
+
   const onFilterTextChange = (text) => {
     filterText = text;
-    console.log(filterText);
-    // let filteredUsers = [];
-    // if (text) {
-    //   filteredUsers = users.filter((user) => {
-    //     return user.name.includes(text);
-    //   });
-    // } else if (!text) {
-    //   filteredUsers = inputUsers;
-    // }
-
-    // setUsers(filteredUsers);
   };
 
   const filterByAge = (val) => {
@@ -76,11 +65,6 @@ function App() {
 
     setUsers(filteredUsers);
   };
-
-  const checkboxInputFunction = (val) => {
-    console.log(val);
-  };
-
   const onClickFilterButton = () => {
     let filteredUsers = [];
     if (filterText) {
@@ -109,8 +93,6 @@ function App() {
         <button onClick={() => setCount(count - 1)}>Decrement Counter</button>
       </div>
       <UserDetail user={user} updateUser={updateUser} />
-
-      <Checkbox label={'SampleLabel'} inputFunc={checkboxInputFunction} />
     </div>
   );
 }
