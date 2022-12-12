@@ -5,6 +5,7 @@ import DisplayCount from './children/displayCount';
 import UserDetail from './children/userDetail';
 function App() {
   let filterText = '';
+  const inputNames = ['Rahul', 'Joe'];
   const inputNumbers = [1, 2, 3];
   const inputUsers = [
     {
@@ -36,6 +37,7 @@ function App() {
       rank: 50,
     },
   ];
+  const [names, setNames] = React.useState(inputNames);
   const [count, setCount] = React.useState(0);
   const [user, setUser] = React.useState({
     name: 'Rakesh',
