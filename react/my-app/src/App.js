@@ -3,9 +3,11 @@ import DisplaySum from './children/displaySum';
 import ListUsers from './children/listUsers';
 import DisplayCount from './children/displayCount';
 import UserDetail from './children/userDetail';
+import ListNames from './children/listNames';
 function App() {
   let filterText = '';
   const inputNames = ['Rahul', 'Joe'];
+  let tempName = '';
   const inputNumbers = [1, 2, 3];
   const inputUsers = [
     {
@@ -80,6 +82,15 @@ function App() {
     setUsers(filteredUsers);
   };
 
+  const handleNameChange = (val) => {
+    tempName = val;
+  };
+
+  const handleAddName = () => {
+    names.push(tempName);
+    setNames([...names]);
+  };
+
   return (
     <div className="parentContainer">
       <DisplaySum numbers={inputNumbers} />
@@ -95,6 +106,15 @@ function App() {
         <button onClick={() => setCount(count - 1)}>Decrement Counter</button>
       </div>
       <UserDetail user={user} updateUser={updateUser} />
+      <div>
+        List Component
+        <input
+          type="text"
+          onChange={(e) => handleNameChange(e.target.value)}
+        ></input>
+        <button onClick={(e) => handleAddName()}>Add Name</button>
+      </div>
+      <ListNames names={names} />
     </div>
   );
 }
