@@ -12,6 +12,7 @@ export default function ListNames() {
     names.push(tempName);
     setNames([...names]);
   };
+
   return (
     <div>
       <h3>List Component</h3>
