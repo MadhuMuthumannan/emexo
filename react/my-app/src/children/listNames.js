@@ -14,17 +14,14 @@ export default function ListNames() {
   };
   return (
     <div>
-      <div>
-        List Component
-        <input
-          type="text"
-          onChange={(e) => handleNameChange(e.target.value)}
-        ></input>
-        <button onClick={(e) => handleAddName()}>Add Name</button>
-      </div>
-      <li>
-        <ol>{namesList}</ol>
-      </li>
+      <h3>List Component</h3>
+      <pre>Add User : </pre>
+      <input
+        type="text"
+        onChange={(e) => handleNameChange(e.target.value)}
+      ></input>
+      <button onClick={(e) => handleAddName()}>Add Name</button>
+      <ol>{namesList}</ol>
     </div>
   );
 }

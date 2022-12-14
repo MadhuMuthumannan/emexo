@@ -53,6 +53,7 @@ export default function ListUsers() {
 
     setUsers(filteredUsers);
   };
+
   const onClickFilterButton = () => {
     let filteredUsers = [];
     if (filterText) {
