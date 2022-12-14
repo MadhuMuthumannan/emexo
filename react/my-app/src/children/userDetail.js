@@ -1,4 +1,15 @@
-function UserDetail({ user, updateUser }) {
+import React from 'react';
+export default function UserDetail() {
+  const [user, setUser] = React.useState({
+    name: 'Rakesh',
+    age: 21,
+  });
+  const updateUser = (prevUser) => {
+    setUser({
+      ...prevUser,
+      age: 23,
+    });
+  };
   return (
     <div className="userDetailContainer">
       <h3>User Detail Component</h3>
@@ -7,5 +18,3 @@ function UserDetail({ user, updateUser }) {
     </div>
   );
 }
-
-export default UserDetail;
