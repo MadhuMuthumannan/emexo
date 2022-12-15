@@ -2,7 +2,7 @@ import React from 'react';
 import Checkbox from './listUsersChildren/checkBox';
 import TextBox from './listUsersChildren/textBox';
 import Button from './listUsersChildren/button';
-import Rows from './listUsersChildren/rows';
+import Table from './listUsersChildren/table';
 
 export default function ListUsers() {
   let filterText = '';
@@ -75,13 +75,7 @@ export default function ListUsers() {
       <TextBox onFilterChange={onFilterChange} />
       <Checkbox filterByAge={filterByAge} />
       <Button onClickFilterButton={onClickFilterButton} />
-      <table id="users">
-        <tbody>
-          <tr>{headings}</tr>
-          <Rows users={users} />
-        </tbody>
-      </table>
-      {/* <Table users={users} headings={headings} /> */}
+      <Table users={users} headings={headings} /> 
     </div>
   );
 }
