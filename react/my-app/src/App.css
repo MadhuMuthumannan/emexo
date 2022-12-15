@@ -1,3 +1,17 @@
 a {
-  color: red;
+  text-decoration: none;
+  padding: 12px 47px 12px 15px !important;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+
+a.active {
+  background-color: #04aa6d;
+  color: #ffffff;
+}
+
+a:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
