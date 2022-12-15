@@ -16,6 +16,7 @@ code {
   border: 4px blue solid;
   margin: 2px;
   width: 60%;
+  padding: 10px;
 }
 
 .displaySumContainer > p {
@@ -63,18 +64,21 @@ div.userContainer {
   border: 4px paleturquoise solid;
   margin: 2px;
   width: 60%;
+  padding: 10px;
 }
 
 div.counterContainer {
   border: 4px orange solid;
   margin: 2px;
   width: 60%;
+  padding: 10px;
 }
 
 div.userDetailContainer {
   border: 4px purple solid;
   margin: 2px;
   width: 60%;
+  padding: 10px;
 }
 
 h3 {
