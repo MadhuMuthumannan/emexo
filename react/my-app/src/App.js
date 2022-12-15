@@ -7,6 +7,7 @@ export default function App() {
       <NavLink to="/userDetail">User Detail</NavLink>
       <NavLink to="/listNames">List Names</NavLink>
       <NavLink to="/listUsers">List Users</NavLink>
+      <NavLink to="/displaySum">Display Sum</NavLink>
     </div>
   );
 }
