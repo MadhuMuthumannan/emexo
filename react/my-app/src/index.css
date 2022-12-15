@@ -97,3 +97,7 @@ button {
 div.userContainer > input {
   margin-left: 10px;
 }
+
+a {
+  text-decoration: none;
+}

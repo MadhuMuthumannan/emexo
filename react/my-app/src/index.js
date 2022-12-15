@@ -5,43 +5,24 @@ import UserDetail from './children/userDetail';
 import DisplayCount from './children/displayCount';
 import ListUsers from './children/listUsers';
 import DisplaySum from './children/displaySum';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ListNames from './children/listNames';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <UserDetail />,
-  },
-  {
-    path: '/displayCount',
-    element: <DisplayCount />,
-  },
-  {
-    path: '/listUsers',
-    element: <ListUsers />,
-  },
-  {
-    path: '/listNames',
-    element: <ListNames />,
-  },
-  {
-    path: '/displaySum',
-    element: <DisplaySum />,
-  },
-  {
-    path: '/userDetail',
-    element: <UserDetail />,
-  },
-  {
-    path: '/helloWorld',
-    element: <div>Hello world !!</div>,
-  },
-]);
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <App />
+      <Routes>   
+        <Route path="/" element={<DisplayCount />} />   
+        <Route path="/displayCount" element={<DisplayCount />} />
+        <Route path="/listUsers" element={<ListUsers />} />
+        <Route path="/listNames" element={<ListNames />} />
+        <Route path="/displaySum" element={<DisplaySum />} />
+        <Route path="/userDetail" element={<UserDetail />} />
+      </Routes>
+    </BrowserRouter>    
   </React.StrictMode>
 );
