@@ -1,4 +1,5 @@
 import React from 'react';
+import './userDetail.css';
 import { useParams } from 'react-router-dom';
 
 export default function UserDetail({ user }) {
@@ -37,7 +38,7 @@ export default function UserDetail({ user }) {
     (inputUser) => inputUser.id === Number(userId)
   );
   return (
-    <div className="purpleContainer">
+    <div className="container purpleContainer">
       <h3>User Detail Component</h3>
       {foundUser.name} is of age {foundUser.age}
     </div>
