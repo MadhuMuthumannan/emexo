@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './rows.css';
 
 export default function Rows({ users }) {
   return users.map((user) => {
