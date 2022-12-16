@@ -10,7 +10,9 @@ export default function Rows({ users }) {
         <td>{gender}</td>
         <td>{rank}</td>
         <td>
-          <Link to={`userDetail/${user.id}`}>Detail</Link>
+          <Link className="navLinks" to={`userDetail/${user.id}`}>
+            Detail
+          </Link>
         </td>
       </tr>
     ) : (
@@ -20,7 +22,9 @@ export default function Rows({ users }) {
         <td>{gender}</td>
         <td>{rank}</td>
         <td>
-          <Link to={`userDetail/${user.id}`}>Detail</Link>
+          <Link className="navLinks" to={`userDetail/${user.id}`}>
+            Detail
+          </Link>
         </td>
       </tr>
     );
