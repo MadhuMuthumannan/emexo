@@ -39,7 +39,7 @@ export default function UserDetail({ user }) {
   return (
     <div className="purpleContainer">
       <h3>User Detail Component</h3>
-      {foundUser.name} is of age {foundUser.age}
+      {foundUser.name} is of age {foundUser.age} and has rank {foundUser.rank}
     </div>
   );
 }
