@@ -7,14 +7,14 @@ import ListUsers from './children/listUsers';
 import DisplaySum from './children/displaySum';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ListNames from './children/listNames';
-import App from './App';
+import Nav from './Nav';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Nav />
       <Routes>   
         <Route path="/" element={<DisplayCount />} />   
         <Route path="/displayCount" element={<DisplayCount />} />

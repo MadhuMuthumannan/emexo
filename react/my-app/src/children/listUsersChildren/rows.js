@@ -11,7 +11,7 @@ export default function Rows({ users }) {
         <td>{gender}</td>
         <td>{rank}</td>
         <td>
-          <Link className="navLinks" to={`userDetail/${user.id}`}>
+          <Link className="navLinks" to={`userDetail/${id}`}>
             Detail
           </Link>
         </td>
@@ -23,7 +23,7 @@ export default function Rows({ users }) {
         <td>{gender}</td>
         <td>{rank}</td>
         <td>
-          <Link className="navLinks" to={`userDetail/${user.id}`}>
+          <Link className="navLinks" to={`userDetail/${id}`}>
             Detail
           </Link>
         </td>

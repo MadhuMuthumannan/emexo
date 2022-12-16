@@ -7,8 +7,8 @@ div.navLinkContainer > a {
 }
 
 a.active {
-  background-color: #04aa6d;
-  color: #ffffff;
+  background-color: #04aa6d !important;
+  color: #ffffff !important;
 }
 
 a:hover {

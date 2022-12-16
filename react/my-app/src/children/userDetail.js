@@ -2,16 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 export default function UserDetail({ user }) {
-  // const [user, setUser] = React.useState({
-  //   name: 'Rakesh',
-  //   age: 21,
-  // });
-  // const updateUser = (prevUser) => {
-  //   setUser({
-  //     ...prevUser,
-  //     age: 23,
-  //   });
-  // };
   let { userId } = useParams();
   const inputUsers = [
     {
@@ -50,7 +40,6 @@ export default function UserDetail({ user }) {
     <div className="purpleContainer">
       <h3>User Detail Component</h3>
       {foundUser.name} is of age {foundUser.age}
-      {/* <button onClick={() => updateUser(user)}>Update User</button> */}
     </div>
   );
 }
