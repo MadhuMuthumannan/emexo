@@ -14,7 +14,7 @@ export default function ListNames() {
   };
 
   return (
-    <div className="userDetailContainer">
+    <div className="container purpleContainer">
       <h3>List Component</h3>
       <pre>Add User : </pre>
       <input

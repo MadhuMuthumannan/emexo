@@ -1,0 +1,15 @@
+.container {
+  border: 4px blue solid;
+  margin: 2px;
+  width: 60%;
+  padding: 10px;
+}
+
+.container > p {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.orangeContainer {
+  border: 4px orange solid;
+}

@@ -3,6 +3,7 @@ import Checkbox from './listUsersChildren/checkBox';
 import TextBox from './listUsersChildren/textBox';
 import Button from './listUsersChildren/button';
 import Table from './listUsersChildren/table';
+import './listUsers.css';
 
 export default function ListUsers() {
   let filterText = '';
@@ -70,12 +71,12 @@ export default function ListUsers() {
     filterText = val;
   };
   return (
-    <div className="userContainer">
+    <div className="container purpleContainer">
       Filter text input:
       <TextBox onFilterChange={onFilterChange} />
       <Checkbox filterByAge={filterByAge} />
       <Button onClickFilterButton={onClickFilterButton} />
-      <Table users={users} headings={headings} /> 
+      <Table users={users} headings={headings} />
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function UserDetail() {
     });
   };
   return (
-    <div className="userDetailContainer">
+    <div className="purpleContainer">
       <h3>User Detail Component</h3>
       {user.name} is of age {user.age}
       <button onClick={() => updateUser(user)}>Update User</button>
