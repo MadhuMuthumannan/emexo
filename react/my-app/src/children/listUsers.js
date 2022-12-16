@@ -37,9 +37,9 @@ export default function ListUsers() {
       rank: 50,
     },
   ];
-  const headings = ['Name', 'Age', 'Gender', 'Rank'].map((heading, index) => (
-    <th key={index}>{heading}</th>
-  ));
+  const headings = ['Name', 'Age', 'Gender', 'Rank', 'Detail'].map(
+    (heading, index) => <th key={index}>{heading}</th>
+  );
   const [users, setUsers] = React.useState(inputUsers);
 
   const filterByAge = (val) => {

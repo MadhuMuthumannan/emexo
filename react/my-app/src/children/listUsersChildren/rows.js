@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Rows({ users }) {
   console.log(users);
   return users.map((user) => {
@@ -8,6 +10,9 @@ export default function Rows({ users }) {
         <td>{age}</td>
         <td>{gender}</td>
         <td>{rank}</td>
+        <td>
+          <Link to={`userDetail/${user.id}`}>Detail</Link>
+        </td>
       </tr>
     ) : (
       <tr key={id}>
@@ -15,6 +20,9 @@ export default function Rows({ users }) {
         <td>{age}</td>
         <td>{gender}</td>
         <td>{rank}</td>
+        <td>
+          <Link to={`userDetail/${user.id}`}>Detail</Link>
+        </td>
       </tr>
     );
   });

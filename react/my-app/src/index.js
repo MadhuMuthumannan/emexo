@@ -21,7 +21,7 @@ root.render(
         <Route path="/listUsers" element={<ListUsers />} />
         <Route path="/listNames" element={<ListNames />} />
         <Route path="/displaySum" element={<DisplaySum />} />
-        <Route path="/userDetail" element={<UserDetail />} />
+        <Route path="/listUsers/userDetail/:userId" element={<UserDetail />} />
       </Routes>
     </BrowserRouter>    
   </React.StrictMode>
