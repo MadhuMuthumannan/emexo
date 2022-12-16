@@ -1,0 +1,10 @@
+.purpleContainer {
+  border: 4px purple solid;
+}
+
+.container {
+  border: 4px blue solid;
+  margin: 2px;
+  width: 60%;
+  padding: 10px;
+}
