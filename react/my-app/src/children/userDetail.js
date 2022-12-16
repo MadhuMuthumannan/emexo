@@ -43,11 +43,9 @@ export default function UserDetail({ user }) {
       rank: 50,
     },
   ];
-  console.log(userId);
   const foundUser = inputUsers.find(
     (inputUser) => inputUser.id === Number(userId)
   );
-  console.log(foundUser);
   return (
     <div className="purpleContainer">
       <h3>User Detail Component</h3>
