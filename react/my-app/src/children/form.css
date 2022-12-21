@@ -9,3 +9,15 @@
 form {
   padding: 25px;
 }
+
+.btn-container {
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+}
+
+label:not(.form-check-label) {
+  font-weight: bold;
+}
