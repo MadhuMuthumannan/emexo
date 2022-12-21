@@ -5,7 +5,7 @@ export default function Form() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isDirty, isValid },
   } = useForm({
     defaultValues: {
       name: 'Pragnya',
@@ -134,7 +134,11 @@ export default function Form() {
           )}
         </div>
         <div className="form-group btn-container">
-          <input type="submit" className="btn btn-primary" />
+          <input
+            type="submit"
+            className="btn btn-primary"
+            disabled={!isDirty || !isValid}
+          />
         </div>
       </form>
     </div>
