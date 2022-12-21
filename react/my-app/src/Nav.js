@@ -7,6 +7,7 @@ export default function Nav() {
       <NavLink to="/displaySum">Display Sum</NavLink>
       <NavLink to="/listNames">List Names</NavLink>
       <NavLink to="/listUsers">List Users</NavLink>
+      <NavLink to="/form">Form</NavLink>
     </div>
   );
 }

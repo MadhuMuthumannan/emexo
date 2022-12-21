@@ -8,6 +8,8 @@ import DisplaySum from './children/displaySum';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ListNames from './children/listNames';
 import Nav from './Nav';
+import Form from './children/form';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,6 +24,7 @@ root.render(
         <Route path="/listNames" element={<ListNames />} />
         <Route path="/displaySum" element={<DisplaySum />} />
         <Route path="/listUsers/userDetail/:userId" element={<UserDetail />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
     </BrowserRouter>    
   </React.StrictMode>

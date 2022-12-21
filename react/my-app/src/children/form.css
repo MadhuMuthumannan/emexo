@@ -1,0 +1,11 @@
+.add-user-form {
+  height: auto;
+  width: 354px;
+  background-color: lightblue;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+form {
+  padding: 25px;
+}
