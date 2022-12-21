@@ -6,7 +6,12 @@ export default function Form() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      name: 'Pragnya',
+      gender: 'female',
+    },
+  });
 
   const onSubmit = (data) => {
     console.log(data);
