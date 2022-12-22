@@ -127,7 +127,28 @@ export default function Form() {
               Max rank is 99
             </p>
           )}
+          <label>Highest Qualification:</label>
+          
+          <div className='form-group'>
+          <select className="form-control" {...register('qualification', { required: true })}>
+            <option value="">-</option>
+            <option value="BE/BTech">BE/BTech</option>
+            <option value="MTech">MTech</option>
+            <option value="BCom">BCom</option>
+            <option value="MCom">MCom</option>
+            <option value="BSc">BSc</option>
+            <option value="MSc">MSc</option>
+          </select>
+          {errors.qualification?.type === 'required' && (
+            <p role="alert" className="error-message">
+              Qualification is required
+            </p>
+          )}
+          </div>
         </div>
+          
+
+
         <div className="form-group btn-container">
           <input type="submit" className="btn btn-primary" />
         </div>
