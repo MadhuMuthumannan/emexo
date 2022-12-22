@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 export default function DisplayCount() {
   const [count, setCount] = React.useState(0);
+
+  useEffect(() => {
+    console.log('Use effect printing ...');
+    return () => {
+      console.log('Printing during unmounting...');
+    };
+  }, [count]);
 
   return (
     <div className="container">

@@ -10,6 +10,7 @@ import ListNames from './children/listNames';
 import Nav from './Nav';
 import Form from './children/form';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Axios from './children/axios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,6 +26,7 @@ root.render(
         <Route path="/displaySum" element={<DisplaySum />} />
         <Route path="/listUsers/userDetail/:userId" element={<UserDetail />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/axios" element={<Axios />} />
       </Routes>
     </BrowserRouter>    
   </React.StrictMode>
