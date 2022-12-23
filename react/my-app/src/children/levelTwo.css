@@ -1,0 +1,14 @@
+div.box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.theme-light {
+  background: white;
+}
+
+.theme-dark {
+  background: black;
+}
