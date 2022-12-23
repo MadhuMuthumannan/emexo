@@ -38,7 +38,7 @@ export default function ListUsers() {
       rank: 50,
     },
   ];
-  const headings = ['Name', 'Age', 'Gender', 'Rank', 'Detail'].map(
+  const headings = ['Name', 'Age', 'Gender', 'Rank', 'Actions'].map(
     (heading, index) => <th key={index}>{heading}</th>
   );
   const [users, setUsers] = React.useState(inputUsers);
@@ -92,8 +92,8 @@ export default function ListUsers() {
 
   const onClickEdit = (userIndex) => {
     setCurrentEditId(userIndex);
-    setAddUserMode(true);
     setDefaultValue(users[userIndex]);
+    setAddUserMode(true);
   };
 
   const onClickAddUser = () => {
