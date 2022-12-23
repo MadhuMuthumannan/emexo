@@ -27,11 +27,19 @@ export default function Axios() {
     }
   }, [id]);
 
+  const getCommentById = () => {
+    axios.get(`${baseURL}${tempId}/comments`).then((response) => {
+      console.log(response.data);
+    });
+  };
+
   return (
     <div>
       <label>Enter id:</label>
       <input type="text" onChange={(e) => onIdChange(e.target.value)} />
       <button onClick={() => onSetId()}>Get By ID</button>
+
+      <button onClick={() => getCommentById()}>Get Comments By ID</button>
 
       <button onClick={() => getAllPosts()}>Get All posts</button>
     </div>
