@@ -4,3 +4,11 @@ a.navLinks {
   padding: 5px;
   color: white;
 }
+
+.edit-btn {
+  background-color: cornflowerblue;
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+  margin-left: 2px;
+}

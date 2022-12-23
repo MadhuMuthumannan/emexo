@@ -3,6 +3,7 @@ import Checkbox from './listUsersChildren/checkBox';
 import TextBox from './listUsersChildren/textBox';
 import Button from './listUsersChildren/button';
 import Table from './listUsersChildren/table';
+import Form from './form';
 import './listUsers.css';
 
 export default function ListUsers() {
@@ -41,7 +42,9 @@ export default function ListUsers() {
     (heading, index) => <th key={index}>{heading}</th>
   );
   const [users, setUsers] = React.useState(inputUsers);
-
+  const [addUserMode, setAddUserMode] = React.useState(false);
+  const [defaultValue, setDefaultValue] = React.useState(null);
+  const [currentEditId, setCurrentEditId] = React.useState(null);
   const filterByAge = (val) => {
     let filteredUsers = [];
     if (val) {
@@ -67,16 +70,52 @@ export default function ListUsers() {
 
     setUsers(filteredUsers);
   };
+
   const onFilterChange = (val) => {
     filterText = val;
   };
+
+  const onFormClose = () => {
+    setAddUserMode(false);
+  };
+
+  const onSubmit = (user) => {
+    if (defaultValue) {
+      users.splice(currentEditId, 1, user);
+      setUsers([...users]);
+    } else {
+      users.push({ ...user, id: users.length + 1 });
+      setUsers([...users]);
+    }
+    setAddUserMode(false);
+  };
+
+  const onClickEdit = (userIndex) => {
+    setCurrentEditId(userIndex);
+    setAddUserMode(true);
+    setDefaultValue(users[userIndex]);
+  };
+
+  const onClickAddUser = () => {
+    setDefaultValue(null);
+    setAddUserMode(true);
+  };
+
   return (
     <div className="container purpleContainer">
       Filter text input:
       <TextBox onFilterChange={onFilterChange} />
       <Checkbox filterByAge={filterByAge} />
       <Button onClickFilterButton={onClickFilterButton} />
-      <Table users={users} headings={headings} />
+      <button onClick={() => onClickAddUser()}>Add User</button>
+      <Table users={users} headings={headings} onClickEdit={onClickEdit} />
+      {addUserMode && (
+        <Form
+          onClose={onFormClose}
+          onFormSubmit={onSubmit}
+          defaultValue={defaultValue}
+        />
+      )}
     </div>
   );
 }

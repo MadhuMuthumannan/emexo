@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './rows.css';
 
-export default function Rows({ users }) {
+export default function Rows({ users, onClickEdit }) {
   return users.map((user) => {
     const { id, name, age, gender, rank } = user;
     return gender === 'Female' ? (
@@ -14,6 +14,9 @@ export default function Rows({ users }) {
           <Link className="navLinks" to={`userDetail/${id}`}>
             Detail
           </Link>
+          <span className="edit-btn" onClick={() => onClickEdit(id - 1)}>
+            Edit
+          </span>
         </td>
       </tr>
     ) : (
@@ -26,6 +29,9 @@ export default function Rows({ users }) {
           <Link className="navLinks" to={`userDetail/${id}`}>
             Detail
           </Link>
+          <span className="edit-btn" onClick={() => onClickEdit(id - 1)}>
+            Edit
+          </span>
         </td>
       </tr>
     );

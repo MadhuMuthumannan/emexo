@@ -1,20 +1,17 @@
 import { useForm } from 'react-hook-form';
 import './form.css';
 
-export default function Form() {
+export default function Form({ onClose, onFormSubmit, defaultValue }) {
   const {
     register,
     handleSubmit,
     formState: { errors, isDirty, isValid },
   } = useForm({
-    defaultValues: {
-      name: 'Pragnya',
-      gender: 'female',
-    },
+    defaultValues: defaultValue,
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    onFormSubmit(data);
   };
 
   return (
@@ -59,7 +56,7 @@ export default function Form() {
             </p>
           )}
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label>Email:</label>
           <input
             {...register('email', {
@@ -77,7 +74,7 @@ export default function Form() {
               Not a valid email
             </p>
           )}
-        </div>
+        </div> */}
         <div className="form-group">
           <label>Gender:</label>
           <div className="form-check">
@@ -85,7 +82,7 @@ export default function Form() {
               className="form-check-input"
               {...register('gender', { required: true })}
               type="radio"
-              value="male"
+              value="Male"
               id="male"
             />
             <label htmlFor="male" className="form-check-label">
@@ -96,7 +93,7 @@ export default function Form() {
             <input
               {...register('gender', { required: true })}
               type="radio"
-              value="female"
+              value="Female"
               id="female"
               className="form-check-input"
             />
@@ -132,27 +129,28 @@ export default function Form() {
               Max rank is 99
             </p>
           )}
-          <label>Highest Qualification:</label>
-          
-          <div className='form-group'>
-          <select className="form-control" {...register('qualification', { required: true })}>
-            <option value="">-</option>
-            <option value="BE/BTech">BE/BTech</option>
-            <option value="MTech">MTech</option>
-            <option value="BCom">BCom</option>
-            <option value="MCom">MCom</option>
-            <option value="BSc">BSc</option>
-            <option value="MSc">MSc</option>
-          </select>
-          {errors.qualification?.type === 'required' && (
-            <p role="alert" className="error-message">
-              Qualification is required
-            </p>
-          )}
-          </div>
-        </div>
-          
+          {/* <label>Highest Qualification:</label>
 
+            <div className="form-group">
+              <select
+                className="form-control"
+                {...register('qualification', { required: true })}
+              >
+                <option value="">-</option>
+                <option value="BE/BTech">BE/BTech</option>
+                <option value="MTech">MTech</option>
+                <option value="BCom">BCom</option>
+                <option value="MCom">MCom</option>
+                <option value="BSc">BSc</option>
+                <option value="MSc">MSc</option>
+              </select>
+              {errors.qualification?.type === 'required' && (
+                <p role="alert" className="error-message">
+                  Qualification is required
+                </p>
+              )}
+            </div> */}
+        </div>
 
         <div className="form-group btn-container">
           <input
@@ -160,6 +158,9 @@ export default function Form() {
             className="btn btn-primary"
             disabled={!isDirty || !isValid}
           />
+          <button className="btn btn-primary" onClick={() => onClose()}>
+            Close
+          </button>
         </div>
       </form>
     </div>

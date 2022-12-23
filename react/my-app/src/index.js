@@ -25,7 +25,6 @@ root.render(
         <Route path="/listNames" element={<ListNames />} />
         <Route path="/displaySum" element={<DisplaySum />} />
         <Route path="/listUsers/userDetail/:userId" element={<UserDetail />} />
-        <Route path="/form" element={<Form />} />
         <Route path="/axios" element={<Axios />} />
       </Routes>
     </BrowserRouter>    
