@@ -7,12 +7,8 @@ export default function LevelTwo() {
   const className = `box theme-${toggle}`;
   return (
     <div>
-
-      <div className={className}>
-
-      </div>
+      <div className={className}></div>
       <button onClick={toggleFunction}>Toggle Theme</button>
-      <span>works</span>
     </div>
   );
 }
