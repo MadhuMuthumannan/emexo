@@ -3,15 +3,16 @@ import { ThemeContext } from './themeContext';
 import './levelTwo.css';
 
 export default function LevelTwo() {
-  const theme = useContext(ThemeContext);
-  console.log(theme);
-  const className = `box theme-${theme}`;
+  const { toggle, toggleFunction } = useContext(ThemeContext);
+  const className = `box theme-${toggle}`;
   return (
-    <ThemeContext.Consumer>
-      <div>
-        <div className={className}></div>
-        <span>works</span>
+    <div>
+
+      <div className={className}>
+
       </div>
-    </ThemeContext.Consumer>
+      <button onClick={toggleFunction}>Toggle Theme</button>
+      <span>works</span>
+    </div>
   );
 }

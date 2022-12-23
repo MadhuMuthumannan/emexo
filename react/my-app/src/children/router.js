@@ -1,7 +1,6 @@
-import { useContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nested from './nested';
-import { ThemeContext } from './themeContext';
+import { ThemeContextProvider } from './themeContext';
 import Nav from '../Nav';
 import DisplayCount from '../children/displayCount';
 import DisplaySum from '../children/displaySum';
@@ -11,11 +10,9 @@ import UserDetail from '../children/userDetail';
 import Axios from '../children/axios';
 
 export default function Router() {
-  const { theme, setTheme } = useContext(ThemeContext);
   return (
     <BrowserRouter>
       <Nav />
-      <button onClick={() => setTheme('dark')}>Set Dark</button>
       <Routes>
         <Route path="/" element={<DisplayCount />} />
         <Route path="/displayCount" element={<DisplayCount />} />
@@ -27,9 +24,9 @@ export default function Router() {
         <Route
           path="/nested"
           element={
-            <ThemeContext.Provider value={theme}>
+            <ThemeContextProvider>
               <Nested />
-            </ThemeContext.Provider>
+            </ThemeContextProvider>
           }
         />
       </Routes>
