@@ -1,8 +1,7 @@
 import React, { createContext, useContext, useReducer } from 'react';
 
 const initialState = {
-  count1: 0,
-  count2: 0,
+  count: 0,
 };
 
 const reducer = (state, action) => {
@@ -40,7 +39,7 @@ const Counter = ({ name }) => {
   const [state, dispatch] = useGlobalState();
   return (
     <div>
-      {state[name]}
+      {state['count']}
       <button onClick={() => dispatch({ type: 'INCREMENT', name })}>+1</button>
       <button onClick={() => dispatch({ type: 'DECREMENT', name })}>-1</button>
     </div>
@@ -51,11 +50,8 @@ const CounterReducer = () => (
   <GlobalStateProvider>
     <div className="container orangeContainer">
       <h1>Count1</h1>
-      <Counter name="count1" />
-      <Counter name="count1" />
-      <h1>Count2</h1>
-      <Counter name="count2" />
-      <Counter name="count2" />
+      <Counter name="count" />
+      <Counter name="count" />
     </div>
   </GlobalStateProvider>
 );
