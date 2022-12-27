@@ -9,6 +9,7 @@ export default function Nav() {
       <NavLink to="/listUsers">List Users</NavLink>
       <NavLink to="/axios">Axios</NavLink>
       <NavLink to="/nested">Nested</NavLink>
+      <NavLink to="/counter">Counter</NavLink>
     </div>
   );
 }

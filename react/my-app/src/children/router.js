@@ -8,6 +8,7 @@ import ListUsers from '../children/listUsers';
 import ListNames from '../children/listNames';
 import UserDetail from '../children/userDetail';
 import Axios from '../children/axios';
+import CounterReducer from '../counterReducer';
 
 export default function Router() {
   return (
@@ -29,6 +30,7 @@ export default function Router() {
             </ThemeContextProvider>
           }
         />
+        <Route path="/counter" element={<CounterReducer />} />
       </Routes>
     </BrowserRouter>
   );

@@ -3,13 +3,14 @@ import './rows.css';
 
 export default function Rows({ users, onClickEdit }) {
   return users.map((user) => {
-    const { id, name, age, gender, rank } = user;
+    const { id, name, age, gender, rank, qualification } = user;
     return gender === 'Female' ? (
       <tr key={id} style={{ color: 'red' }}>
         <td>{name}</td>
         <td>{age}</td>
         <td>{gender}</td>
         <td>{rank}</td>
+        <td>{qualification}</td>
         <td>
           <Link className="navLinks" to={`userDetail/${id}`}>
             Detail
@@ -25,6 +26,7 @@ export default function Rows({ users, onClickEdit }) {
         <td>{age}</td>
         <td>{gender}</td>
         <td>{rank}</td>
+        <td>{qualification}</td>
         <td>
           <Link className="navLinks" to={`userDetail/${id}`}>
             Detail

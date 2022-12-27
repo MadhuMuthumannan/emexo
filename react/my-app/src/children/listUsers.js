@@ -15,6 +15,7 @@ export default function ListUsers() {
       gender: 'Male',
       id: 1,
       rank: 120,
+      qualification: 'Msc',
     },
     {
       name: 'Malathi',
@@ -22,6 +23,7 @@ export default function ListUsers() {
       gender: 'Female',
       id: 2,
       rank: 87,
+      qualification: 'Bsc',
     },
     {
       name: 'Ramesh',
@@ -29,6 +31,7 @@ export default function ListUsers() {
       gender: 'Male',
       id: 3,
       rank: 99,
+      qualification: 'MCom',
     },
     {
       name: 'Suji',
@@ -36,11 +39,17 @@ export default function ListUsers() {
       gender: 'Female',
       id: 4,
       rank: 50,
+      qualification: 'Msc',
     },
   ];
-  const headings = ['Name', 'Age', 'Gender', 'Rank', 'Actions'].map(
-    (heading, index) => <th key={index}>{heading}</th>
-  );
+  const headings = [
+    'Name',
+    'Age',
+    'Gender',
+    'Rank',
+    'Qualification',
+    'Actions',
+  ].map((heading, index) => <th key={index}>{heading}</th>);
   const [users, setUsers] = React.useState(inputUsers);
   const [addUserMode, setAddUserMode] = React.useState(false);
   const [defaultValue, setDefaultValue] = React.useState(null);
