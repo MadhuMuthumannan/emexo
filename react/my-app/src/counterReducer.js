@@ -51,7 +51,6 @@ const CounterReducer = () => (
     <div className="container orangeContainer">
       <h1>Count1</h1>
       <Counter name="count" />
-      <Counter name="count" />
     </div>
   </GlobalStateProvider>
 );
