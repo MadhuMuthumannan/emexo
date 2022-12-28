@@ -1,9 +1,10 @@
 div.navLinkContainer > a {
   text-decoration: none;
-  padding: 12px 63px 12px 54px !important;
+  padding: 10px 25px 12px 25px !important;
   color: white;
   background-color: black;
   display: inline-block;
+  font-size: 12px;
 }
 
 a.active {
