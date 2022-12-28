@@ -9,6 +9,10 @@ import ListNames from '../children/listNames';
 import UserDetail from '../children/userDetail';
 import Axios from '../children/axios';
 import CounterReducer from '../counterReducer';
+import ParentComponent from '../hooks/ParentComponent';
+import Counter from '../hooks/Counter';
+import HookTimer from '../hooks/HookTimer';
+import FocusInput from '../hooks/FocusInput';
 
 export default function Router() {
   return (
@@ -22,6 +26,10 @@ export default function Router() {
         <Route path="/displaySum" element={<DisplaySum />} />
         <Route path="/listUsers/userDetail/:userId" element={<UserDetail />} />
         <Route path="/axios" element={<Axios />} />
+        <Route path="/hooks" element={<ParentComponent />} />
+        <Route path="/hookCounter" element={<Counter />} />
+        <Route path="/hookTimer" element={<HookTimer />} />
+        <Route path="/focusInput" element={<FocusInput />} />
         <Route
           path="/nested"
           element={
