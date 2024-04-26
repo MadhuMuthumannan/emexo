@@ -14,6 +14,7 @@ export default function Nav() {
       <NavLink to="/hookCounter">Use Memo</NavLink>
       <NavLink to="/hookTimer">Hook Timer</NavLink>
       <NavLink to="/focusInput">Hook Focus</NavLink>
+      <NavLink to="/students">Students List</NavLink>
     </div>
   );
 }

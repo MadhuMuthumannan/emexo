@@ -13,6 +13,7 @@ import ParentComponent from '../hooks/ParentComponent';
 import Counter from '../hooks/Counter';
 import HookTimer from '../hooks/HookTimer';
 import FocusInput from '../hooks/FocusInput';
+import Student from './student';
 
 export default function Router() {
   return (
@@ -30,6 +31,7 @@ export default function Router() {
         <Route path="/hookCounter" element={<Counter />} />
         <Route path="/hookTimer" element={<HookTimer />} />
         <Route path="/focusInput" element={<FocusInput />} />
+        <Route path="/students" element={<Student />} />
         <Route
           path="/nested"
           element={
