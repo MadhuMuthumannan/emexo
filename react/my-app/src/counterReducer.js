@@ -39,7 +39,7 @@ const Counter = ({ name }) => {
   const [state, dispatch] = useGlobalState();
   return (
     <div>
-      {state['count']}
+      <span id='count'>{state['count']}</span>
       <button onClick={() => dispatch({ type: 'INCREMENT', name })}>+1</button>
       <button onClick={() => dispatch({ type: 'DECREMENT', name })}>-1</button>
     </div>
